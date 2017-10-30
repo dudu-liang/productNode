@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="../styles/common.css" />
+	<link rel="stylesheet" href="../styles/push.css" />
+  </head>
+  <body>
+
+  <div class="top">
+     发布商品
+  </div>
+
+  <div class="content">
+
+     <div class="line">
+         <input type="text" class="inp name" placeholder="请输入商品名称" />
+     </div>
+
+     <div class="line">
+         <input type="text" class="inp desc" placeholder="请输入商品描述" />
+     </div>
+
+     <div class="line">
+         <input type="text" class="inp price" placeholder="请输入商品价格(人民币)" />
+     </div>
+
+     <form class="line upload-box" id="uploadForm" method="post" enctype="multipart/form-data" action="/api/upload">
+         <input type="file" class="inp file" id="upload" name="thumbnail" />
+          <button class="upload-btn" type="button">上传图片</button> 
+     </form>
+    
+     <div class="upload-img">
+       <img src="" alt="" class="show-img">
+     </div>
+
+     <div class="line">
+         <button type="button" class="push-btn">确认发布</button>
+     </div>
+
+  </div>
+  
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../js/push.js"></script>
+  </body>
+</html>
