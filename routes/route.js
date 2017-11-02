@@ -151,12 +151,11 @@ router.post('/api/register',function(req,res) {
                     //注册用户
                     registerUser(query,function(data) {
                             var hash = hashPW(name, password);
-                            res.cookie("account", {account: name, hash: hash}, {maxAge: 60000});
+                            res.cookie("account", {account: name, hash: hash}, {maxAge: 86400000});
                             res.send({
                                 status : 200,
                                 message : 'register success'
                             });
-
                     })
                 }else{
                     res.send({
