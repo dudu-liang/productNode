@@ -118,7 +118,7 @@ router.post('/api/login',function(req,res) {
                         message : '用户名或密码错误'
                     });
                 }else{
-                    res.cookie("account", {account: name, hash: hash}, {maxAge: 60000});
+                    res.cookie("account", {account: name, hash: hash}, {maxAge: 86400000});
                     res.send({
                         status : 200,
                         message : 'login success'

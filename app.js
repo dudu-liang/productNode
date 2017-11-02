@@ -35,6 +35,6 @@ app.use(express.static('./public'))  //静态资源
 app.use(router);  //路由
 
 
-app.listen(8080);
+app.listen(80);
 
 
